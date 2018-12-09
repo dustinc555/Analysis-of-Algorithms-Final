@@ -25,7 +25,7 @@ int main()
         arr.push_back(v);
     }
     
-    printArray(arr);
+    //printArray(arr);
     //high_resolution_clock::time_point start = high_resolution_clock::now();
     funSort(arr);
     //high_resolution_clock::time_point finish = high_resolution_clock::now();
@@ -33,7 +33,7 @@ int main()
     //auto timeElapsed = duration_cast<nanoseconds>( finish - start ).count();
     
     printArray(arr);
-    cout << endl;
+    //cout << endl;
     
     //cout << timeElapsed << endl;
     
@@ -67,7 +67,7 @@ void funSort(vector<int> & arr)
     for (int i = 0; i < arr.size(); i++) 
     {
         int h = binarySearch(arr, arr[i]);
-        cout << "i: " << i << " h: " << h << endl;
+        //cout << "i: " << i << " h: " << h << endl;
         while (arr[h] != arr[i])
         {
             if (i < h - 1)
@@ -75,10 +75,10 @@ void funSort(vector<int> & arr)
             else if (h < i)
                 swap(arr[h], arr[i]);
 
-            cout << "i: " << i << endl;
-            printArray(arr);
+            //cout << "i: " << i << endl;
+            //printArray(arr);
             h = binarySearch(arr, arr[i]);
-            cout << " new h: " << h << endl;
+            //cout << " new h: " << h << endl;
         }
     }
 }
